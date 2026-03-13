@@ -1,0 +1,207 @@
+export type SkillCategory = {
+  name: string;
+  skills: string[];
+};
+
+export type Project = {
+  title: string;
+  context: string;
+  year: string;
+  tags: string[];
+  impact: string;
+};
+
+export type Experience = {
+  company: string;
+  role: string;
+  location: string;
+  period: string;
+  focus: string;
+  stack?: string;
+};
+
+export type Education = {
+  school: string;
+  diploma: string;
+  location: string;
+  period: string;
+  details?: string;
+};
+
+export type Certification = {
+  issuer: string;
+  title: string;
+};
+
+export const profile = {
+  name: "Saim Bahaeddine",
+  headline:
+    "Data, gouvernance et produits digitaux à l’intersection entre technologie, stratégie et impact business.",
+  currentStatus:
+    "Étudiant en MSc Informatique & Management à l’EPITA, ouvert à l’alternance en data, BI, gouvernance et projets digitaux.",
+  positioning:
+    "Je conçois et pilote des produits data et digitaux qui concilient exigence technique, qualité de la donnée, expérience utilisateur et performance opérationnelle."
+};
+
+export const skillCategories: SkillCategory[] = [
+  {
+    name: "Data \u0026 Analytics",
+    skills: [
+      "Python (exploration \u0026 notebooks)",
+      "KPI design",
+      "Data quality checks",
+      "Data visualisation (Power BI, Looker Studio)",
+      "Hadoop (bases)",
+      "Storytelling data"
+    ]
+  },
+  {
+    name: "Data Management \u0026 Gouvernance",
+    skills: [
+      "Modélisation de données",
+      "Approche data-driven",
+      "Cadres PDCA, DIMA, DICT",
+      "Gouvernance \u0026 qualité des données",
+      "RGPD, AI Act, Cloud Act (sensibilisation)",
+      "Analyse de risques EBIOS RM"
+    ]
+  },
+  {
+    name: "Développement Web \u0026 Produits",
+    skills: [
+      "React.js",
+      "HTML, CSS, JavaScript",
+      "Java / Spring Boot",
+      "FastAPI",
+      "Design UX \u0026 UI pragmatique",
+      "Collaboration avec métiers \u0026 juristes"
+    ]
+  },
+  {
+    name: "Soft skills",
+    skills: [
+      "Analyse \u0026 structuration",
+      "Rigueur \u0026 fiabilité",
+      "Autonomie \u0026 adaptabilité",
+      "Esprit critique",
+      "Communication claire",
+      "Travail d’équipe \u0026 leadership"
+    ]
+  }
+];
+
+export const projects: Project[] = [
+  {
+    title: "Audit de conformité \u0026 risques pour une scale-up Agritech",
+    context:
+      "Mission académique simulant un audit stratégique pour une scale-up Agritech en phase de croissance internationale.",
+    year: "2025",
+    tags: ["EBIOS RM", "RGPD", "AI Act", "Cloud Act", "Power BI", "Data Governance"],
+    impact:
+      "Cartographie des flux de données, analyse de risques, évaluation de conformité et création d’un dashboard de gouvernance permettant au comité de direction de piloter ses risques data par des KPI/KRI actionnables."
+  },
+  {
+    title: "Programme de gouvernance data \u0026 cybersécurité",
+    context:
+      "Conception d’un cadre de gouvernance unifiée dans le contexte de la fusion entre un groupe logistique et une startup.",
+    year: "2025",
+    tags: ["Gouvernance data", "Cybersécurité", "Classification data", "KPI/KRI"],
+    impact:
+      "Définition de la stratégie d’accès aux données, classification des informations, formalisation des politiques et mise en place d’un pilotage par KPI/KRI pour sécuriser la croissance et les opérations."
+  },
+  {
+    title: "Application de gestion des contrats juridiques",
+    context:
+      "Projet de fin d’études au sein de Royal Air Maroc pour digitaliser le cycle de vie des contrats juridiques.",
+    year: "2025",
+    tags: ["React", "Spring Boot", "PostgreSQL", "Design orienté métier"],
+    impact:
+      "Conception, développement et déploiement d’une application facilitant le suivi, la traçabilité et la collaboration entre juristes et métiers, avec une structuration claire des données contractuelles."
+  }
+];
+
+export const experiences: Experience[] = [
+  {
+    company: "Royal Air Maroc",
+    role: "Stagiaire ingénieur – Application contrats juridiques",
+    location: "Casablanca, Maroc",
+    period: "Fév. – Juin 2025",
+    focus:
+      "Digitalisation du suivi des contrats juridiques : recueil du besoin, conception de l’architecture, développement et déploiement.",
+    stack: "React, Java Spring Boot, PostgreSQL"
+  },
+  {
+    company: "International Omega Consulting",
+    role: "Stagiaire – Support projets",
+    location: "Paris, France",
+    period: "Août – Sept. 2024",
+    focus:
+      "Apport d’une vision informatique à des projets clients, articulation entre besoins métiers, contraintes techniques et pilotage."
+  },
+  {
+    company: "Digital Garden Agency",
+    role: "Stagiaire – Web \u0026 UX",
+    location: "Oujda, Maroc",
+    period: "Sept. 2023",
+    focus:
+      "Création \u0026 maintenance de sites web, production de supports visuels et optimisation UX pour des clients locaux."
+  },
+  {
+    company: "Algolus",
+    role: "Stagiaire – Front-end e-commerce",
+    location: "Oujda, Maroc",
+    period: "Août 2023",
+    focus:
+      "Développement front-end pour une plateforme e-commerce et participation à des campagnes digitales (LeBonCoin)."
+  }
+];
+
+export const education: Education[] = [
+  {
+    school: "EPITA, Paris",
+    diploma: "MSc Informatique \u0026 Management – Stratégie \u0026 Valorisation de la Data",
+    location: "Paris, France",
+    period: "2025 – 2027"
+  },
+  {
+    school: "EHEI, Oujda",
+    diploma: "Ingénieur d’État en Informatique \u0026 Gestion",
+    location: "Oujda, Maroc",
+    period: "2020 – 2025"
+  },
+  {
+    school: "UMP, Oujda",
+    diploma: "Licence (1re année) Études Anglaises",
+    location: "Oujda, Maroc",
+    period: "2019 – 2020"
+  }
+];
+
+export const certifications: Certification[] = [
+  { issuer: "SkillFront", title: "ISO 27001 Information Security Associate™" },
+  { issuer: "HP LIFE", title: "Agile Project Management" },
+  { issuer: "HP LIFE", title: "Data Science \u0026 Analytics" },
+  { issuer: "Google", title: "Google Analytics Certification" },
+  {
+    issuer: "The Open University",
+    title: "Interpreting data: Boxplots and tables"
+  },
+  {
+    issuer: "The Open University",
+    title: "Project Governance \u0026 PMO"
+  }
+];
+
+export const languages = [
+  "Arabe (natif)",
+  "Français (C1)",
+  "Anglais (avancé)"
+];
+
+export const extracurricular = [
+  "Représentant EPITA pour les salons étudiants \u0026 JPO (présentation du master, échanges avec candidats et familles).",
+  "Ambassadeur du Club Polytechnique CPM (EHEI) lors d’événements universitaires.",
+  "Communication \u0026 media manager du club sportif EHEI.",
+  "Président du BDE EHEI : management d’une équipe de 40 membres et organisation d’événements de 200 à 20 000 participants."
+];
+

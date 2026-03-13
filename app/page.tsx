@@ -1,0 +1,380 @@
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Section } from "@/components/ui/Section";
+import { Badge } from "@/components/ui/Badge";
+import { Card } from "@/components/ui/Card";
+import { SocialLinks } from "@/components/ui/SocialLinks";
+import {
+  certifications,
+  education,
+  experiences,
+  extracurricular,
+  languages,
+  profile,
+  projects,
+  skillCategories
+} from "@/lib/profile";
+
+export default function HomePage() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+
+      <main id="hero" className="flex-1">
+        {/* Hero */}
+        <section className="section-padding border-b border-slate-800/70 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
+          <div className="section-container grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
+            <div className="space-y-6">
+              <p className="pill bg-slate-900/90 text-sky-300/90">
+                Data · Gouvernance · BI · Produits digitaux
+              </p>
+              <div className="space-y-4">
+                <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
+                  Saim Bahaeddine
+                </h1>
+                <p className="text-pretty text-sm font-medium uppercase tracking-[0.25em] text-slate-400 sm:text-xs">
+                  MSc Informatique \u0026 Management – EPITA · Ingénieur d’État
+                  Informatique \u0026 Gestion
+                </p>
+                <p className="text-pretty text-sm leading-relaxed text-slate-300 sm:text-base">
+                  {profile.headline}
+                </p>
+              </div>
+
+              <p className="max-w-xl text-pretty text-sm leading-relaxed text-slate-400 sm:text-[0.95rem]">
+                {profile.positioning}
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center rounded-full bg-sky-400 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/30 transition hover:bg-sky-300"
+                >
+                  Discuter d’une opportunité
+                </a>
+                <a
+                  href="/cv/saim-bahaeddine-cv.pdf"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/80 px-5 py-2.5 text-sm font-medium text-slate-100 shadow-sm shadow-slate-900/80 transition hover:border-sky-400/70 hover:text-sky-100"
+                >
+                  Télécharger mon CV
+                </a>
+              </div>
+
+              <SocialLinks />
+
+              <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-xs text-slate-400">
+                <div>
+                  <dt className="font-semibold text-slate-300">Localisation</dt>
+                  <dd>Île-de-France</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-slate-300">Recherche</dt>
+                  <dd>Alternance data / BI / gouvernance / produit</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-slate-300">Langues</dt>
+                  <dd>{languages.join(" · ")}</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div className="space-y-4 lg:justify-self-end">
+              <div className="relative max-w-sm rounded-3xl border border-slate-800/90 bg-slate-950/80 p-5 shadow-soft-glow">
+                <div className="absolute -inset-x-10 -top-16 h-32 bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
+                <div className="relative space-y-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-300">
+                    Positionnement
+                  </p>
+                  <p className="text-sm leading-relaxed text-slate-200">
+                    {profile.currentStatus}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 text-xs text-slate-300">
+                    <div className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-3">
+                      <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
+                        Focales
+                      </p>
+                      <p>Data, BI, gouvernance, produits digitaux.</p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-3">
+                      <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
+                        Atouts
+                      </p>
+                      <p>Double culture ingénieur / management.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About */}
+        <Section
+          id="about"
+          eyebrow="Profil"
+          title="À l’intersection entre technologie, data et transformation."
+          subtitle="Je construis des ponts entre les équipes techniques, métiers et juridiques pour sécuriser, valoriser et rendre actionnable la donnée."
+        >
+          <div className="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+            <div className="space-y-4 text-sm leading-relaxed text-slate-300">
+              <p>
+                Formé à la fois à l’ingénierie informatique et au management,
+                j’ai évolué dans des environnements où la donnée n’est pas
+                seulement un actif technique, mais un levier de décision,
+                d’efficacité opérationnelle et de conformité.
+              </p>
+              <p>
+                Mes expériences m’ont amené à travailler sur des projets
+                digitaux, des audits de risques, des problématiques de
+                gouvernance data et des applications métiers, en gardant
+                constamment en tête l’expérience utilisateur et l’impact
+                business.
+              </p>
+              <p>
+                Je recherche une alternance où je pourrai contribuer à des
+                projets data, BI ou gouvernance au sein d’équipes pluridisciplinaires,
+                tout en continuant à renforcer ma maîtrise des outils,
+                méthodes et bonnes pratiques du domaine.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <Card as="section">
+                <h3 className="text-sm font-semibold text-slate-100">
+                  En résumé
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-slate-300">
+                  <li>
+                    • Double formation ingénieur d’État (Maroc) et MSc EPITA
+                    (France).
+                  </li>
+                  <li>
+                    • Intérêt fort pour la valorisation de la donnée, la
+                    gouvernance, la cybersécurité et les produits digitaux.
+                  </li>
+                  <li>
+                    • Expériences variées en stage : compagnies aériennes,
+                    conseil, agences digitales, e-commerce.
+                  </li>
+                  <li>
+                    • Implication associative importante : BDE, clubs, rôle
+                    d’ambassadeur et de représentant.
+                  </li>
+                </ul>
+              </Card>
+            </div>
+          </div>
+        </Section>
+
+        {/* Skills */}
+        <Section
+          id="skills"
+          eyebrow="Compétences"
+          title="Un socle technique solide au service de la donnée."
+          subtitle="Compétences techniques, data et humaines structurées pour accompagner des projets exigeants."
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            {skillCategories.map((category) => (
+              <Card key={category.name}>
+                <h3 className="text-sm font-semibold text-slate-100">
+                  {category.name}
+                </h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <Badge key={skill}>{skill}</Badge>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        {/* Projects */}
+        <Section
+          id="projects"
+          eyebrow="Projets"
+          title="Quelques projets représentatifs."
+          subtitle="Sélection de projets académiques et professionnels autour de la data, de la gouvernance et des applications web."
+        >
+          <div className="grid gap-6 md:grid-cols-3">
+            {projects.map((project) => (
+              <Card key={project.title}>
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="text-sm font-semibold text-slate-100">
+                    {project.title}
+                  </h3>
+                  <span className="text-xs text-slate-500">{project.year}</span>
+                </div>
+                <p className="mt-2 text-xs text-slate-300">{project.context}</p>
+                <p className="mt-3 text-xs leading-relaxed text-slate-300">
+                  {project.impact}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-slate-900/80 px-2 py-0.5 text-[0.65rem] text-sky-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        {/* Experience \u0026 Education */}
+        <Section
+          id="experience"
+          eyebrow="Parcours"
+          title="Expériences \u0026 formation."
+          subtitle="Un parcours construit entre ingénierie, management, data et engagement associatif."
+        >
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+            <div className="space-y-5">
+              <h3 className="text-sm font-semibold text-slate-100">
+                Expériences professionnelles
+              </h3>
+              <div className="space-y-4">
+                {experiences.map((exp) => (
+                  <Card key={exp.company}>
+                    <div className="flex items-center justify-between gap-2">
+                      <div>
+                        <p className="text-xs font-semibold text-slate-100">
+                          {exp.company}
+                        </p>
+                        <p className="text-xs text-slate-400">{exp.role}</p>
+                      </div>
+                      <div className="text-right text-[0.7rem] text-slate-500">
+                        <p>{exp.location}</p>
+                        <p>{exp.period}</p>
+                      </div>
+                    </div>
+                    <p className="mt-3 text-xs leading-relaxed text-slate-300">
+                      {exp.focus}
+                    </p>
+                    {exp.stack && (
+                      <p className="mt-2 text-[0.7rem] text-slate-400">
+                        Stack : {exp.stack}
+                      </p>
+                    )}
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <h3 className="text-sm font-semibold text-slate-100">
+                  Formation
+                </h3>
+                <div className="space-y-3">
+                  {education.map((edu) => (
+                    <div
+                      key={edu.school + edu.diploma}
+                      className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4"
+                    >
+                      <p className="text-xs font-semibold text-slate-100">
+                        {edu.diploma}
+                      </p>
+                      <p className="text-xs text-slate-300">{edu.school}</p>
+                      <p className="mt-1 text-[0.7rem] text-slate-500">
+                        {edu.location} · {edu.period}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-sm font-semibold text-slate-100">
+                  Certifications
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {certifications.map((cert) => (
+                    <Badge key={cert.issuer + cert.title}>
+                      {cert.issuer} · {cert.title}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-sm font-semibold text-slate-100">
+                  Engagements \u0026 associatif
+                </h3>
+                <ul className="space-y-2 text-xs text-slate-300">
+                  {extracurricular.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        {/* Contact */}
+        <Section
+          id="contact"
+          eyebrow="Contact"
+          title="Discutons de votre besoin."
+          subtitle="Disponible pour échanger autour d’opportunités en data, BI, gouvernance ou projets digitaux."
+        >
+          <div className="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+            <div className="space-y-5">
+              <Card as="section">
+                <h3 className="text-sm font-semibold text-slate-100">
+                  Me contacter
+                </h3>
+                <p className="mt-3 text-sm text-slate-300">
+                  Pour un échange informel, une opportunité d’alternance ou un
+                  retour sur mon profil, vous pouvez me contacter directement :
+                </p>
+                <div className="mt-4 space-y-2 text-sm text-slate-200">
+                  <p>
+                    Email :{" "}
+                    <a
+                      href="mailto:bahaeddine4info@gmail.com"
+                      className="text-sky-300 hover:text-sky-200"
+                    >
+                      bahaeddine4info@gmail.com
+                    </a>
+                  </p>
+                  <p>
+                    LinkedIn :{" "}
+                    <a
+                      href="https://linkedin.com/in/bahaeddine-saim"
+                      className="text-sky-300 hover:text-sky-200"
+                    >
+                      linkedin.com/in/bahaeddine-saim
+                    </a>
+                  </p>
+                </div>
+              </Card>
+            </div>
+
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 text-xs text-slate-400">
+                <p className="font-semibold text-slate-200">
+                  Informations pratiques
+                </p>
+                <ul className="mt-2 space-y-1">
+                  <li>• Localisation : Île-de-France</li>
+                  <li>• Mobilité : Permis B</li>
+                  <li>
+                    • Périmètre privilégié : data, BI, gouvernance, pilotage
+                    data de la performance, produits digitaux.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
