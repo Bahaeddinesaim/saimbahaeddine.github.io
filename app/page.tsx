@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { Timeline } from "@/components/ui/Timeline";
 import {
   certifications,
   education,
@@ -22,39 +23,40 @@ export default function HomePage() {
 
       <main id="hero" className="flex-1">
         {/* Hero */}
-        <section className="section-padding border-b border-slate-800/70 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
+        <section className="section-padding border-b border-slate-200/70 bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 dark:border-slate-800/70 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900">
           <div className="section-container grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
             <div className="space-y-6">
               <p className="pill bg-slate-900/90 text-sky-300/90">
                 Data · Gouvernance · BI · Produits digitaux
               </p>
               <div className="space-y-4">
-                <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
+                <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl lg:text-5xl">
                   Saim Bahaeddine
                 </h1>
-                <p className="text-pretty text-sm font-medium uppercase tracking-[0.25em] text-slate-400 sm:text-xs">
-                  MSc Informatique \u0026 Management – EPITA · Ingénieur d’État
-                  Informatique \u0026 Gestion
+                <p className="text-pretty text-sm font-medium uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400 sm:text-xs">
+                  MSc Informatique & Management – EPITA · Ingénieur d’État
+                  Informatique & Gestion
                 </p>
-                <p className="text-pretty text-sm leading-relaxed text-slate-300 sm:text-base">
+                <p className="text-pretty text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-base">
                   {profile.headline}
                 </p>
               </div>
 
-              <p className="max-w-xl text-pretty text-sm leading-relaxed text-slate-400 sm:text-[0.95rem]">
+              <p className="max-w-xl text-pretty text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-[0.95rem]">
                 {profile.positioning}
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center rounded-full bg-sky-400 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/30 transition hover:bg-sky-300"
+                  className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/40 transition hover:bg-sky-400"
                 >
                   Discuter d’une opportunité
                 </a>
                 <a
-                  href="/cv/saim-bahaeddine-cv.pdf"
-                  className="inline-flex items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/80 px-5 py-2.5 text-sm font-medium text-slate-100 shadow-sm shadow-slate-900/80 transition hover:border-sky-400/70 hover:text-sky-100"
+                  href="/cv/SAIM_Bahaeddine_CV_FR.pdf"
+                  download
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300/80 bg-white/90 px-5 py-2.5 text-sm font-medium text-slate-900 shadow-sm shadow-slate-900/10 transition hover:border-sky-500/70 hover:text-sky-600 dark:border-slate-700/80 dark:bg-slate-950/80 dark:text-slate-100 dark:shadow-slate-900/80 dark:hover:border-sky-400/70 dark:hover:text-sky-100"
                 >
                   Télécharger mon CV
                 </a>
@@ -62,7 +64,7 @@ export default function HomePage() {
 
               <SocialLinks />
 
-              <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-xs text-slate-400">
+              <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
                 <div>
                   <dt className="font-semibold text-slate-300">Localisation</dt>
                   <dd>Île-de-France</dd>
@@ -79,24 +81,24 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4 lg:justify-self-end">
-              <div className="relative max-w-sm rounded-3xl border border-slate-800/90 bg-slate-950/80 p-5 shadow-soft-glow">
+              <div className="relative max-w-sm rounded-3xl border border-slate-200/90 bg-white/90 p-5 shadow-soft-glow dark:border-slate-800/90 dark:bg-slate-950/80">
                 <div className="absolute -inset-x-10 -top-16 h-32 bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
                 <div className="relative space-y-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-300">
+                  <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-500 dark:text-sky-300">
                     Positionnement
                   </p>
-                  <p className="text-sm leading-relaxed text-slate-200">
+                  <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">
                     {profile.currentStatus}
                   </p>
                   <div className="grid grid-cols-2 gap-3 text-xs text-slate-300">
-                    <div className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-3">
-                      <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
+                    <div className="rounded-2xl border border-slate-200/80 bg-slate-50 p-3 dark:border-slate-800/80 dark:bg-slate-950/80">
+                      <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-500">
                         Focales
                       </p>
                       <p>Data, BI, gouvernance, produits digitaux.</p>
                     </div>
-                    <div className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-3">
-                      <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
+                    <div className="rounded-2xl border border-slate-200/80 bg-slate-50 p-3 dark:border-slate-800/80 dark:bg-slate-950/80">
+                      <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-500">
                         Atouts
                       </p>
                       <p>Double culture ingénieur / management.</p>
@@ -116,7 +118,7 @@ export default function HomePage() {
           subtitle="Je construis des ponts entre les équipes techniques, métiers et juridiques pour sécuriser, valoriser et rendre actionnable la donnée."
         >
           <div className="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
-            <div className="space-y-4 text-sm leading-relaxed text-slate-300">
+            <div className="space-y-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
               <p>
                 Formé à la fois à l’ingénierie informatique et au management,
                 j’ai évolué dans des environnements où la donnée n’est pas
@@ -224,71 +226,51 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* Experience \u0026 Education */}
+        {/* Experience  Education */}
         <Section
           id="experience"
           eyebrow="Parcours"
-          title="Expériences \u0026 formation."
+          title="Expériences  formation."
           subtitle="Un parcours construit entre ingénierie, management, data et engagement associatif."
         >
           <div className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
             <div className="space-y-5">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                 Expériences professionnelles
               </h3>
-              <div className="space-y-4">
-                {experiences.map((exp) => (
-                  <Card key={exp.company}>
-                    <div className="flex items-center justify-between gap-2">
-                      <div>
-                        <p className="text-xs font-semibold text-slate-100">
-                          {exp.company}
-                        </p>
-                        <p className="text-xs text-slate-400">{exp.role}</p>
-                      </div>
-                      <div className="text-right text-[0.7rem] text-slate-500">
-                        <p>{exp.location}</p>
-                        <p>{exp.period}</p>
-                      </div>
-                    </div>
-                    <p className="mt-3 text-xs leading-relaxed text-slate-300">
-                      {exp.focus}
-                    </p>
-                    {exp.stack && (
-                      <p className="mt-2 text-[0.7rem] text-slate-400">
-                        Stack : {exp.stack}
-                      </p>
-                    )}
-                  </Card>
-                ))}
-              </div>
+              <Timeline
+                variant="experience"
+                items={experiences.map((exp) => ({
+                  id: exp.company + exp.period,
+                  title: exp.company,
+                  subtitle: exp.role,
+                  period: exp.period,
+                  location: exp.location,
+                  description: exp.focus,
+                  meta: exp.stack ? `Stack : ${exp.stack}` : undefined
+                }))}
+              />
             </div>
 
             <div className="space-y-6">
               <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                   Formation
                 </h3>
-                <div className="space-y-3">
-                  {education.map((edu) => (
-                    <div
-                      key={edu.school + edu.diploma}
-                      className="rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4"
-                    >
-                      <p className="text-xs font-semibold text-slate-100">
-                        {edu.diploma}
-                      </p>
-                      <p className="text-xs text-slate-300">{edu.school}</p>
-                      <p className="mt-1 text-[0.7rem] text-slate-500">
-                        {edu.location} · {edu.period}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <Timeline
+                  variant="education"
+                  items={education.map((edu) => ({
+                    id: edu.school + edu.period,
+                    title: edu.diploma,
+                    subtitle: edu.school,
+                    period: edu.period,
+                    location: edu.location
+                  }))}
+                />
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                   Certifications
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -301,10 +283,10 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-slate-100">
-                  Engagements \u0026 associatif
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  Engagements & associatif
                 </h3>
-                <ul className="space-y-2 text-xs text-slate-300">
+                <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300">
                   {extracurricular.map((item) => (
                     <li key={item}>• {item}</li>
                   ))}
