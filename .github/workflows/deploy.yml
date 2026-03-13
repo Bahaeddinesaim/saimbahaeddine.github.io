@@ -35,6 +35,8 @@ jobs:
         run: |
           npm run build
           npm run export
+        env:
+          NEXT_PUBLIC_PAGES_BASE_PATH: /saimbahaeddine.github.io
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

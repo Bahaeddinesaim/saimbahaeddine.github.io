@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Briefcase, GraduationCap } from "lucide-react";
 
 type TimelineItem = {
@@ -21,7 +20,7 @@ export function Timeline({ items, variant }: TimelineProps) {
 
   return (
     <ol className="relative space-y-6 border-l border-slate-200/70 pl-4 dark:border-slate-800/70 md:pl-6">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <li key={item.id} className="relative">
           <span className="absolute -left-[9px] top-1 flex h-4 w-4 items-center justify-center">
             <span className="h-2.5 w-2.5 rounded-full bg-sky-500 shadow-[0_0_0_4px_rgba(56,189,248,0.15)]" />
