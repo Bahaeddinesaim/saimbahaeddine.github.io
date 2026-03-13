@@ -1,28 +1,15 @@
-const isGithubActions = !!process.env.GITHUB_ACTIONS;
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 const repo = "saimbahaeddine.github.io";
 
-/**
- * GitHub Pages serves project sites under:
- * https://<username>.github.io/<repo>/
- *
- * For local dev we keep basePath empty.
- */
-const basePath = isGithubActions ? `/${repo}` : "";
-
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true
-  },
   reactStrictMode: true,
   output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  basePath,
-  assetPrefix: basePath
+  basePath: isGithubActions ? `/${repo}` : "",
+  assetPrefix: isGithubActions ? `/${repo}/` : ""
 };
 
 export default nextConfig;
-
